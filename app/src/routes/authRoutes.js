@@ -38,7 +38,7 @@ const SECRET_KEY = 'your_secret_key'; // Замените на свой секр
 const ACCESS_TOKEN_EXPIRY = '15m'; // Время жизни access token
 const REFRESH_TOKEN_EXPIRY = '7d'; // Время жизни refresh token
 
-// Создание нового пользователя и токенов
+// Аутентификация пользователя
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
