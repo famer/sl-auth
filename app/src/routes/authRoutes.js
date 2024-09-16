@@ -47,8 +47,8 @@ router.post('/login', async (req, res) => {
   }
 
   try {
-
-    const url = 'http://sl_profiles:3000/api/users/login';
+    const host = process.env.PROFILES_URL || 'http://sl_profiles:3000';
+    const url = `${host}/api/users/login`;
     const options = {
         method: 'POST',
         headers: {
